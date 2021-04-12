@@ -10,6 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
+ *     collectionOperations={"get"={"method"="GET"},"post"={"method"="POST"}},
+ *     itemOperations={"get"={"method"="GET"},"delete"={"method"="DELETE"},"patch"={"method"="PATCH"}},
  *     attributes={
  *      "pagination_items_per_page"=20
  *     })

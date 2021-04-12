@@ -9,7 +9,9 @@ use App\Repository\CategorieRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={"get"={"method"="GET"}},
+ *     itemOperations={"get"={"method"="GET"}})
  * @ApiFilter(SearchFilter::class, properties={"name": "partial"})
  * @ORM\Entity(repositoryClass=CategorieRepository::class)
  */
